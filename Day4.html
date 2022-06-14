@@ -1,0 +1,253 @@
+<doctype html>
+<html lang="en-us">
+<head>
+<title>Work</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="img1.jpg">
+<style>
+
+.frame{
+position:absolute;
+top:50%;
+left:50%;
+margin-left:-200px;
+margin-top:-200px;
+width:400px;
+height:400px;
+background:#272C34;
+z-index:0;
+box-shadow:5px 5px 6px 5px rgba(255,255,0,0.3),12px 10px 6px 5px rgba(241,160,150,0.7),8px 8px 6px 5px rgba(198,192,191,0.4);
+cursor:pointer;
+animation:shades 4s ease-in-out infinite;
+}
+
+.center{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+.circle{
+overflow:hidden;
+position:relative;
+border-radius:50%;
+height:180px;
+width:180px;
+clip-path:circle(50%);
+z-index:2;
+background-color:#fff;
+}
+
+.sky{
+position:absolute;
+top:0;
+left:0;
+height:120px;
+width:180px;
+background:#7DDFFC;
+z-index:3;
+animation:skyfade 4s ease-in-out infinite;
+}
+
+.ground{
+position:absolute;
+top:120px;
+width:180px;
+height:60px;
+background:#F0DE75;
+z-index:3;
+animation:dimlight 4s ease-in-out infinite;
+}
+
+.sun{
+position:absolute;
+top:40px;
+width:30px;
+height:30px;
+transform-origin:300% 400%;
+background:#FFEF00;
+z-index:4;
+border-radius:50%;
+animation:sun-set 4s ease-in-out infinite;}
+
+.left-side{
+position:absolute;
+top:70px;
+left:40px;
+width:90px;
+height:50px;
+clip-path:polygon(0% 100%,50% 100%,50% 0%);
+z-index:4;
+background:#F4F4F4;
+animation:bnw 4s ease-in-out infinite;}
+
+.right-side{
+position:absolute;
+top:70px;
+left:50px;
+width:70px;
+height:50px;
+clip-path:polygon(50% 100%,100% 100%,50% 0%);
+z-index:4;
+background:#DDDADA;
+animation:bnw 4s ease-in-out infinite reverse;
+}
+
+
+.shadow{
+position:absolute;
+height:90px;
+width:160px;
+left:40px;
+z-index:4;
+background:#DDDADA;
+clip-path:polygon(0% 0%,120% 100%, 50% 0%);
+animation:shady 4s ease-in-out infinite;}
+
+
+@keyframes shades{
+
+0%{
+box-shadow:8px 8px 6px 5px rgba(255,255,0,0.7);
+}
+25%{
+box-shadow:8px 8px 6px 5px rgba(247,127,112,0.7);
+}
+50%{
+box-shadow:8px 8px 6px 5px rgba(198,192,191,0.7);
+}
+75%{
+box-shadow:8px 8px 6px 5px rgba(198,192,191,0.7);
+}
+100%{
+box-shadow:8px 8px 6px 5px rgba(255,255,0,0.7);
+}
+
+}
+
+@keyframes bnw{
+
+0%{
+background:#F4F4F4;
+}
+25%{
+background:#F4F4F4;
+}
+50%{
+background:#DDDADA;
+}
+75%{
+background:#DDDADA;
+}
+100%{
+background:#F4F4F4;
+}
+
+}
+@keyframes shady{
+
+0%{
+clip-path:polygon(0% 0%,120% 100%, 50% 0%);
+background:#DDDADA;
+}
+25%{
+clip-path:polygon(0% 0%,40% 40%, 50% 0%);
+background:#DDDADA;
+}
+50%{
+clip-path:polygon(0% 0%,20% 40%, 50% 0%);
+background:#6B6969;
+}
+75%{
+clip-path:polygon(0% 0%,-300% 10%, 50% 0%);
+background:#6B6969;
+}
+100%{
+clip-path:polygon(0% 0%,120% 100%, 50% 0%);
+background:#DDDADA;
+}
+
+}
+
+
+
+@keyframes sun-set{
+0%{
+transform:rotate(0deg);
+background:#FFEF00;
+}
+25%{
+transform:rotate(20deg);
+background:#F1A096;
+}
+50%{
+transform:rotate(45deg);
+background:#fff;
+}
+75%{
+transform:rotate(65deg);
+background:#fff;
+}
+100%{
+transform:rotate(0deg);
+background:#FFEF00;
+}
+}
+
+@keyframes skyfade{
+0%{
+background:#7DDFFC;}
+25%{
+background:#F9D1C1;}
+50%{
+background: #272C34 20%;}
+75%{
+background:#272C34;}
+100%{
+background:#7DDFFC;;}
+}
+
+
+@keyframes dimlight{
+0%{
+background:#F0DE75;}
+25%{
+background:#F9BF8B;}
+50%{
+background:#9E9E9E;}
+75%{
+background:#9E9E9E;}
+100%{
+background:#F0DE75;}
+
+}
+
+//top:120px;
+//left:40px;
+
+</style>
+
+
+</head>
+
+<body>
+
+<div class="frame">
+<div class="center">
+<div class="circle">
+<div class="sun"></div>
+<div class="left-side"></div>
+<div class="right-side"></div>
+<div class="sky"></div>
+<div class="ground">
+<div class="shadow"></div></div>
+</div>
+</div>
+</div>
+
+</body>
+
+
+</html>
+

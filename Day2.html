@@ -1,0 +1,313 @@
+<doctype html>
+<html lang="en-us">
+<head>
+<title>Work</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+
+<style>
+
+.frame{
+position:absolute;
+top:50%;
+left:50%;
+margin-top:-200px;
+margin-left:-200px;
+width:400px;
+height:400px;
+background:#3FAF82;
+font-family:"Courier New","Courier","sans-serif";
+box-shadow:5px 10px 10px 2px rgba(0,0,0,0.3);}
+
+.center{
+position:absolute;
+top:55%;
+left:50%;
+transform:translate(-50%,-50%);}
+
+#menu{
+position:relative;
+height:100px;
+width:100px;
+cursor:pointer;}
+
+#line1{
+position:absolute;
+top:0;
+width:100px;
+height:10px;
+background:#fff;
+box-shadow:5px 10px 10px 2px rgba(0,0,0,0.3);
+border-radius:2px;
+}
+
+#line2{
+position:absolute;
+top:20px;
+width:100px;
+height:10px;
+background:#fff;
+box-shadow:5px 10px 10px 2px rgba(0,0,0,0.3);
+border-radius:2px;}
+
+#line3{
+position:absolute;
+top:40px;
+width:100px;
+height:10px;
+background:#fff;
+box-shadow:5px 10px 10px 2px rgba(0,0,0,0.3);
+border-radius:2px;}
+
+</style>
+
+
+
+
+</head>
+
+<body>
+
+<button onclick="callme()">Here 1click</button>
+<button onclick="callme2()">Here 2click</button>
+
+<div class="frame">
+
+<div class="center">
+
+<div id="menu">
+<div id="line1" ></div>
+<div id="line2"></div>
+<div id="line3"></div>
+</div>
+</div>
+</div>
+
+
+<script>
+
+document.getElementById("menu").addEventListener('click',callme);
+var a=1;
+function callme()
+{
+
+
+if(a==1){
+callme2();
+
+let id=null;
+
+const l1=document.getElementById("line1");
+
+let pos=0;
+
+
+clearInterval(id);
+id=setInterval(frame,20);
+function frame(){
+if(pos==20)
+{
+clearInterval(id);
+callme3();
+callme4();
+a=2;
+}
+else
+{
+pos++;
+l1.style.top=pos+"px";
+}
+}
+
+
+}
+
+if(a==2){
+
+callme5();
+
+let id6=null;
+
+const l7=document.getElementById("line1");
+
+let x4=50;
+
+
+clearInterval(id6);
+id6=setInterval(frame6,20);
+function frame6(){
+if(x4==0)
+{
+clearInterval(id6);
+callme6();
+callme7();
+a=1;
+}
+else
+{
+x4--;
+l7.style.transform='rotate('+x4+'deg)';
+}
+}
+
+
+//2 if bracket
+
+}
+
+
+
+
+}
+
+function callme2()
+{
+
+const l3=document.getElementById("line3");
+
+let pos2=40;
+let id2=null;
+clearInterval(id2);
+id2=setInterval(frame2,20);
+function frame2(){
+if(pos2==20)
+{
+clearInterval(id2);
+}
+else
+{
+pos2--;
+l3.style.top=pos2+"px";
+}
+}
+}
+
+function callme3()
+{
+
+let id3=null;
+const l4=document.getElementById("line1");
+let x=0;
+
+
+clearInterval(id3);
+id3=setInterval(frame3,20);
+function frame3(){
+if(x==50)
+{
+clearInterval(id3);
+}
+else
+{
+x++;
+l4.style.transform='rotate('+x+'deg)';
+}
+}
+
+}
+
+
+function callme4()
+{
+
+let id4=null;
+const l5=document.getElementById("line3");
+let x2=0;
+
+
+clearInterval(id4);
+id4=setInterval(frame4,20);
+function frame4(){
+if(x2==(-50))
+{
+clearInterval(id4);
+}
+else
+{
+x2--;
+l5.style.transform='rotate('+x2+'deg)';
+}
+}
+
+}
+
+function callme5()
+{
+
+const l6=document.getElementById("line3");
+
+let x3=-50;
+let id5=null;
+clearInterval(id5);
+id5=setInterval(frame5,20);
+function frame5(){
+if(x3==0)
+{
+clearInterval(id5);
+}
+else
+{
+x3++;
+l6.style.transform='rotate('+x3+'deg)';
+}
+}
+
+
+
+}
+
+function callme6(){
+
+const l8=document.getElementById("line1");
+
+let pos3=20;
+let id7=null;
+clearInterval(id7);
+id7=setInterval(frame7,20);
+function frame7(){
+if(pos3==0)
+{
+clearInterval(id7);
+}
+else
+{
+pos3--;
+l8.style.top=pos3+"px";
+}
+}
+
+}
+
+function callme7(){
+
+const l9=document.getElementById("line3");
+
+let pos4=20;
+let id8=null;
+clearInterval(id8);
+id8=setInterval(frame8,20);
+function frame8(){
+if(pos4==40)
+{
+clearInterval(id8);
+}
+else
+{
+pos4++;
+l9.style.top=pos4+"px";
+}
+}
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>
+
+
+
+
